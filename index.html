@@ -2,94 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auralux</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auralux – Illuminate Your Inner Glow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --rose-gold: #b76e79;
+      --ivory: #fff8f0;
+      --text: #333;
+      --accent: #fce4ec;
+    }
+
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: #fff6ed;
-      color: #333;
+      background-color: var(--ivory);
+      color: var(--text);
     }
 
     header {
-      background-color: #c17b7f;
+      background-color: var(--rose-gold);
       color: white;
-      padding: 2rem;
+      padding: 4rem 2rem 3rem;
       text-align: center;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin: 0 0 1rem;
     }
 
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
+      font-size: 1.3rem;
+      margin: 0;
     }
 
     section {
-      margin-bottom: 3rem;
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
-      color: #c17b7f;
-      font-size: 1.75rem;
+      font-size: 2rem;
+      color: var(--rose-gold);
       margin-bottom: 1rem;
     }
 
-    .services, .tips {
-      display: flex;
-      flex-wrap: wrap;
+    p {
+      line-height: 1.6;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
+      margin-top: 1.5rem;
     }
 
     .card {
       background-color: white;
-      border-radius: 1rem;
-      padding: 1.25rem;
-      box-shadow: 0 0 20px rgba(193, 123, 127, 0.2);
-      flex: 1 1 calc(50% - 1.5rem);
-      min-width: 250px;
-      max-width: 300px;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
-    .card h3 {
-      margin-top: 0;
-      font-family: 'Playfair Display', serif;
-      color: #c17b7f;
+    .card strong {
+      font-weight: 700;
     }
 
-    .tips .card {
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    footer {
+      background-color: var(--accent);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
     }
 
-    .tips .emoji {
-      font-size: 1.3rem;
+    @media (max-width: 1024px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    @media (max-width: 768px) {
-      .services, .tips {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
       }
 
-      .card {
-        width: 100%;
-        max-width: 100%;
+      .grid-4 {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -100,43 +103,55 @@
     <p>Illuminate your inner glow with AI-powered skincare support</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Meet Auralux</h2>
-      <p>Auralux is your elegant and nurturing AI esthetician. Whether you're struggling with dry skin, looking for the perfect routine, or just need a glow-up affirmation, I'm here to guide you with personalized skincare insights 24/7.</p>
-    </section>
+  <section>
+    <h2>Meet Auralux</h2>
+    <p>Auralux is your elegant and nurturing AI esthetician. Whether you're struggling with dry skin, looking for the perfect routine, or just need a glow-up affirmation, I'm here to guide you with personalized skincare insights 24/7.</p>
+  </section>
 
-    <section>
-      <h2>Glow Services</h2>
-      <div class="services">
-        <div class="card">
-          <h3>Routine Builder</h3>
-          <p>Custom skincare steps tailored to your unique skin profile.</p>
-        </div>
-        <div class="card">
-          <h3>Product Recommender</h3>
-          <p>Suggested cleansers, serums & moisturizers that actually work.</p>
-        </div>
-        <div class="card">
-          <h3>Glow Consult</h3>
-          <p>Schedule a quick chat with our AI assistant for tailored support.</p>
-        </div>
-        <div class="card">
-          <h3>Affirmation Uplift</h3>
-          <p>Need a little boost? Auralux is here for your inner glow too.</p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>Glow Services</h2>
+    <div class="grid-4">
+      <div class="card"><strong>Routine Builder</strong><br>Custom skincare steps tailored to your unique skin profile.</div>
+      <div class="card"><strong>Product Recommender</strong><br>Suggested cleansers, serums & moisturizers that actually work.</div>
+      <div class="card"><strong>Glow Consult</strong><br>Schedule a quick chat with our AI assistant for tailored support.</div>
+      <div class="card"><strong>Affirmation Uplift</strong><br>Need a little boost? Auralux is here for your inner glow too.</div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Glow Tips</h2>
-      <div class="tips">
-        <div class="card"><span class="emoji">💧</span> Drink water like it’s your job</div>
-        <div class="card"><span class="emoji">🧴</span> Double cleanse after sunscreen or makeup</div>
-        <div class="card"><span class="emoji">🛏️</span> Use a silk pillowcase to reduce friction + breakouts</div>
-        <div class="card"><span class="emoji">🚀</span> Glow starts with gut health</div>
-      </div>
-    </section>
-  </main>
+  <section>
+    <h2>Glow Tips</h2>
+    <div class="grid-4">
+      <div class="card">💧 Drink water like it’s your job</div>
+      <div class="card">🧴 Double cleanse after sunscreen or makeup</div>
+      <div class="card">🛏️ Use a silk pillowcase to reduce friction + breakouts</div>
+      <div class="card">🧬 Glow starts with gut health</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>FAQs</h2>
+    <p><strong>Is Auralux a real esthetician?</strong><br>Nope—just really smart AI trained to help guide your glow journey with kindness.</p>
+    <p><strong>Can Auralux recommend based on my skin type?</strong><br>Yes! Just tell her what’s up and she’ll tailor her answers.</p>
+    <p><strong>How do I chat?</strong><br>Click the chat bubble at the bottom right of the screen.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Auralux AI Skincare. Made with glow & code ✨
+  </footer>
+
+  <!-- IBM Watson Assistant Embed Script -->
+  <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "YOUR-INTEGRATION-ID", // replace with actual ID
+        region: "us-south",
+        serviceInstanceID: "YOUR-SERVICE-ID", // replace with actual ID
+        onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
 </body>
 </html>
