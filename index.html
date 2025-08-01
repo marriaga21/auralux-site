@@ -11,6 +11,11 @@
       --ivory: #fff8f0;
       --text: #333;
       --accent: #fce4ec;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -18,6 +23,7 @@
       font-family: 'Open Sans', sans-serif;
       background-color: var(--ivory);
       color: var(--text);
+      scroll-behavior: smooth;
     }
 
     header {
@@ -31,11 +37,13 @@
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin: 0 0 1rem;
+      animation: fadeInDown 1s ease-out;
     }
 
     header p {
       font-size: 1.3rem;
       margin: 0;
+      animation: fadeInUp 1s ease-out;
     }
 
     section {
@@ -48,7 +56,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       color: var(--rose-gold);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     p {
@@ -66,11 +74,19 @@
       background-color: white;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 16px var(--shadow);
+      transition: transform 0.2s ease-in-out;
     }
 
-    .card strong {
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .title {
+      color: var(--rose-gold);
       font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: block;
     }
 
     footer {
@@ -78,6 +94,10 @@
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
+    }
+
+    .faq p {
+      margin-bottom: 1.2rem;
     }
 
     @media (max-width: 1024px) {
@@ -90,10 +110,19 @@
       header h1 {
         font-size: 2rem;
       }
-
       .grid-4 {
         grid-template-columns: 1fr;
       }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -111,24 +140,24 @@
   <section>
     <h2>Glow Services</h2>
     <div class="grid-4">
-      <div class="card"><strong>Routine Builder</strong><br>Custom skincare steps tailored to your unique skin profile.</div>
-      <div class="card"><strong>Product Recommender</strong><br>Suggested cleansers, serums & moisturizers that actually work.</div>
-      <div class="card"><strong>Glow Consult</strong><br>Schedule a quick chat with our AI assistant for tailored support.</div>
-      <div class="card"><strong>Affirmation Uplift</strong><br>Need a little boost? Auralux is here for your inner glow too.</div>
+      <div class="card"><span class="title">Routine Builder</span>Custom skincare steps tailored to your unique skin profile.</div>
+      <div class="card"><span class="title">Product Recommender</span>Suggested cleansers, serums & moisturizers that actually work.</div>
+      <div class="card"><span class="title">Glow Consult</span>Schedule a quick chat with our AI assistant for tailored support.</div>
+      <div class="card"><span class="title">Affirmation Uplift</span>Need a little boost? Auralux is here for your inner glow too.</div>
     </div>
   </section>
 
   <section>
     <h2>Glow Tips</h2>
     <div class="grid-4">
-      <div class="card">💧 Drink water like it’s your job</div>
-      <div class="card">🧴 Double cleanse after sunscreen or makeup</div>
-      <div class="card">🛏️ Use a silk pillowcase to reduce friction + breakouts</div>
-      <div class="card">🧬 Glow starts with gut health</div>
+      <div class="card"><span class="title">💧 Hydration First</span>Drink water like it’s your job</div>
+      <div class="card"><span class="title">🧴 Double Cleanse</span>After sunscreen or makeup</div>
+      <div class="card"><span class="title">🛏️ Sleep Smart</span>Use a silk pillowcase to reduce friction + breakouts</div>
+      <div class="card"><span class="title">🧬 Gut Glow</span>Glow starts with gut health</div>
     </div>
   </section>
 
-  <section>
+  <section class="faq">
     <h2>FAQs</h2>
     <p><strong>Is Auralux a real esthetician?</strong><br>Nope—just really smart AI trained to help guide your glow journey with kindness.</p>
     <p><strong>Can Auralux recommend based on my skin type?</strong><br>Yes! Just tell her what’s up and she’ll tailor her answers.</p>
