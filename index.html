@@ -16,7 +16,7 @@
     header {
       background-color: #cd8c8c;
       color: white;
-      padding: 40px 20px 20px;
+      padding: 40px 20px 30px;
       text-align: center;
     }
 
@@ -45,11 +45,15 @@
       margin-bottom: 10px;
     }
 
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
-      justify-content: space-between;
       margin-top: 20px;
     }
 
@@ -58,8 +62,6 @@
       padding: 20px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      flex: 1 1 calc(25% - 20px);
-      min-width: 220px;
       transition: transform 0.3s ease;
     }
 
@@ -74,8 +76,8 @@
       font-weight: bold;
     }
 
-    .tips {
-      margin-top: 50px;
+    .tips .card p {
+      font-weight: bold;
     }
 
     .emoji {
@@ -83,13 +85,13 @@
       margin-left: 6px;
     }
 
-    @media (max-width: 768px) {
-      .card-container {
-        flex-direction: column;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
       }
 
-      .card {
-        flex: 1 1 100%;
+      header p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -107,7 +109,7 @@
 
   <section>
     <h2>Glow Services</h2>
-    <div class="card-container">
+    <div class="grid">
       <div class="card">
         <h3>Routine Builder</h3>
         <p>Custom skincare steps tailored to your unique skin profile.</p>
@@ -129,18 +131,18 @@
 
   <section class="tips">
     <h2>Glow Tips</h2>
-    <div class="card-container">
+    <div class="grid">
       <div class="card">
-        <p><strong>Drink water like it’s your job</strong> <span class="emoji">💧</span></p>
+        <p>Drink water like it’s your job <span class="emoji">💧</span></p>
       </div>
       <div class="card">
-        <p><strong>Double cleanse after sunscreen or makeup</strong> <span class="emoji">🧴</span></p>
+        <p>Double cleanse after sunscreen or makeup <span class="emoji">🧴</span></p>
       </div>
       <div class="card">
-        <p><strong>Use a silk pillowcase to reduce friction + breakouts</strong> <span class="emoji">🪡</span></p>
+        <p>Use a silk pillowcase to reduce friction + breakouts <span class="emoji">🪡</span></p>
       </div>
       <div class="card">
-        <p><strong>Glow starts with gut health</strong> <span class="emoji">🚀</span></p>
+        <p>Glow starts with gut health <span class="emoji">🚀</span></p>
       </div>
     </div>
   </section>
