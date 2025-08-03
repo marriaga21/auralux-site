@@ -28,28 +28,24 @@
 
 .header {
   background-color: var(--rose-gold);
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
 }
 
-.branding-wrapper {
-  position: relative;
-  width: fit-content;
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo {
-  position: absolute;
-  left: -70px; /* adjust this number to fine-tune left positioning */
-  top: 50%;
-  transform: translateY(-50%);
   height: 60px;
   width: auto;
 }
 
-.name-stack {
-  text-align: center;
-  padding-left: 70px; /* must match the left offset of .logo to avoid overlap */
+.text-stack {
+  text-align: left;
 }
 
 .brand-name {
@@ -60,10 +56,11 @@
 }
 
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: white;
-  margin-top: 0.3rem;
+  margin: 0.3rem 0 0;
 }
+
 
 
 
