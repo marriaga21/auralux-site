@@ -29,15 +29,13 @@
     header {
       background-color: var(--rose-gold);
       padding: 0.5rem 0rem;
-      text-align: center;
     }
 
     .header-content {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 2rem;
-      flex-wrap: wrap;
     }
 
     header img {
@@ -47,10 +45,8 @@
     }
 
     .text-stack {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.3rem;
+      text-align: center;
+      margin: 0 auto;
       animation: fadeInDown 1s ease-out;
     }
 
@@ -165,14 +161,14 @@
 <body>
 
   <header>
-    <div class="header-content">
-      <img src="auralux-logo.png" alt="Auralux Logo" />
-      <div class="text-stack">
-        <h1>Auralux</h1>
-        <p>Illuminate Your Inner Glow</p>
-      </div>
+  <div class="header-content">
+    <img src="auralux-logo.png" alt="Auralux Logo" />
+    <div class="text-stack">
+      <h1>Auralux</h1>
+      <p>Illuminate Your Inner Glow</p>
     </div>
-  </header>
+  </div>
+</header>
 
   <section>
     <h2>Meet Auralux</h2>
