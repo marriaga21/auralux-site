@@ -36,17 +36,24 @@
 .brand-wrapper {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap; /* ⛔ prevent stacking */
   max-width: 100%;
+  white-space: nowrap;
 }
 
 .logo {
-  height: 170px;
+  height: 60px;
   width: auto;
+  flex-shrink: 0; /* ⛔ prevent it from shrinking or wrapping */
 }
 
 .text-stack {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brand-name {
@@ -58,9 +65,10 @@
 
 .tagline {
   font-size: .85rem;
-  margin: 0.3rem 0 0;
+  margin-top: 0.3rem;
   color: white;
 }
+
 
 
     section {
