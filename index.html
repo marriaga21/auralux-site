@@ -26,73 +26,43 @@
       scroll-behavior: smooth;
     }
 
-.header {
-  background-color: var(--rose-gold);
-  padding: 3rem 1rem;
-  text-align: center;
-}
+    .header {
+      background-color: var(--rose-gold);
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
 
-.brand-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.logo {
-  height: 80px;
-  width: auto;
-}
-
-.text-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* aligns text neatly under "Auralux" */
-}
-
-.brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: white;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0.3rem;
-}
-
-
-
-
-    .text-stack {
+    .header-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      margin: 0 auto;
-      animation: fadeInDown 1s ease-out;
     }
 
-    .text-stack h1 {
+    .logo-name {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .logo {
+      height: 70px;
+      width: auto;
+    }
+
+    .brand-name {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      margin: 0;
+      font-size: 3rem;
       color: white;
-    }
-
-    .text-stack p {
-      font-size: 1.4rem;
       margin: 0;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
       color: white;
-    }
-
-    @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      margin-top: 0.5rem;
     }
 
     section {
@@ -156,105 +126,27 @@
     }
 
     @media (max-width: 600px) {
-      .text-stack h1 {
+      .brand-name {
         font-size: 2rem;
       }
 
-      .text-stack p {
+      .tagline {
         font-size: 1.1rem;
       }
 
       .grid-4 {
         grid-template-columns: 1fr;
       }
-
-      .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 👈 center the whole block */
-  gap: 2rem;
-  position: relative;
-}
-
-      .text-stack {
-        text-align: center;
-      }
     }
   </style>
 </head>
 <body>
-
- <header class="header">
-  <div class="brand-container">
-    <img src="auralux-logo.png" alt="Auralux logo" class="logo" />
-    <div class="text-stack">
-      <h1 class="brand-name">Auralux</h1>
+  <header class="header">
+    <div class="header-wrap">
+      <div class="logo-name">
+        <img src="auralux-logo.png" alt="Auralux logo" class="logo" />
+        <h1 class="brand-name">Auralux</h1>
+      </div>
       <p class="tagline">Illuminate Your Inner Glow</p>
     </div>
-  </div>
-</header>
-
-
-
-
-  <section>
-    <h2>Meet Auralux</h2>
-    <p>Auralux is your elegant and nurturing AI esthetician. Whether you're struggling with dry skin, looking for the perfect routine, or just need a glow-up affirmation, I'm here to guide you with personalized skincare insights 24/7.</p>
-  </section>
-
-  <section>
-    <h2>Glow Services</h2>
-    <div class="grid-4">
-      <div class="card"><span class="title">Routine Builder</span>Custom skincare steps tailored to your unique skin profile.</div>
-      <div class="card"><span class="title">Product Recommender</span>Suggested cleansers, serums & moisturizers that actually work.</div>
-      <div class="card"><span class="title">Glow Consult</span>Schedule a quick chat with our AI assistant for tailored support.</div>
-      <div class="card"><span class="title">Affirmation Uplift</span>Need a little boost? Auralux is here for your inner glow too.</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Glow Tips</h2>
-    <div class="grid-4">
-      <div class="card"><span class="title">💧 Hydration First</span>Drink water like it’s your job</div>
-      <div class="card"><span class="title">🧴 Double Cleanse</span>After sunscreen or makeup</div>
-      <div class="card"><span class="title">🛏️ Sleep Smart</span>Use a silk pillowcase to reduce friction + breakouts</div>
-      <div class="card"><span class="title">🧬 Gut Glow</span>Glow starts with gut health</div>
-    </div>
-  </section>
-
-  <section class="faq">
-    <h2>FAQs</h2>
-    <p><strong>Is Auralux a real esthetician?</strong><br>No, she is a smart AI trained assistant to help guide your glow journey with kindness.</p>
-    <p><strong>Is Auralux safe to use for all skin types?</strong><br>Yes, Auralux is designed to offer inclusive guidance for all skin tones, textures, and types, from sensitive and acne-prone to mature to the fairest tone ladies, medium beauties, to the melanin-rich queens. She’s trained with diversity in mind.</p>
-    <p><strong>Does Auralux sell products?</strong><br>No, Auralux is unbiased. She recommends products based on what works, not what sells. No sponsorships, no pressure—just real, honest advice.</p>
-    <p><strong>Can Auralux tell if a product is right for me?</strong><br>Yes. She analyzes your input (like skin type, climate, goals, and ingredient tolerances) to offer tailored, evidence based recommendations. You still get to make the final call, she jassists in helping make a smarter decision.</p>
-    <p><strong>Will Auralux replace my dermatologist?</strong><br>No, girl. She’s a supplement, not a substitute. Auralux offers daily skincare support, but she’ll always recommend a visit to a licensed dermatologist for medical conditions or persistent concerns.</p>
-    <p><strong>How does Auralux stay updated on skincare trends and science?</strong><br>Auralux is powered by AI models trained on extensive dermatological sources and continually updated with peer-reviewed research, formulation trends, and community feedback. Translation? She's always evolving to keep your glow on point.</p>
-    <p><strong>Can Auralux recommend items based on my skin type?</strong><br>Yes! Explain to her what the issue is or what you would like to achieve and she’ll tailor her answers.</p>
-    <p><strong>Can I use Auralux if I already have a routine?</strong><br>Yes. Auralux can enhance, refine, or troubleshoot your current regimen. She won’t throw shade—just helpful suggestions.</p>
-    <p><strong>How do I chat?</strong><br>Click the chat bubble at the bottom right of the screen.</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Auralux AI Skincare. Made with glow & code ✨
-  </footer>
-
-  <!-- IBM Watson Assistant Embed Script -->
-  <script>
-    window.watsonAssistantChatOptions = {
-        integrationID: "YOUR-INTEGRATION-ID", // replace with actual ID
-        region: "us-south",
-        serviceInstanceID: "YOUR-SERVICE-ID", // replace with actual ID
-        onLoad: function(instance) { instance.render(); }
-    };
-    setTimeout(function(){
-      const t=document.createElement('script');
-      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
-      document.head.appendChild(t);
-    });
-  </script>
-
-</body>
-</html>
-
-
+  </header>
