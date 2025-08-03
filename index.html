@@ -26,49 +26,52 @@
       scroll-behavior: smooth;
     }
 
-    header {
-      background-color: var(--rose-gold);
-      color: white;
-      padding: 4rem 2rem 3rem;
-      text-align: center;
-    }
+    .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin: 0 0 1rem;
-      animation: fadeInDown 1s ease-out;
-    }
+header img {
+  height: 120px;
+  width: auto;
+  animation: fadeInLeft 1s ease-out;
+}
 
-    header p {
-      font-size: 1.3rem;
-      margin: 0;
-      animation: fadeInUp 1s ease-out;
-    }
+.text-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
 
-    header div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeInDown 1s ease-out;
+}
 
-    header img {
-      height: 60px;
-      width: auto;
-      animation: fadeInLeft 1s ease-out;
-    }
+header p {
+  font-size: 1.3rem;
+  margin: 0;
+  animation: fadeInUp 1s ease-out;
+}
 
-    @keyframes fadeInLeft {
-      from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
     opacity: 1;
     transform: translateX(0);
-    }
   }
+}
+
 
     section {
       padding: 3rem 2rem;
@@ -151,15 +154,16 @@
   </style>
 </head>
 <body>
-  <header>
-  <div>
+ <header>
+  <div class="header-content">
     <img src="auralux-logo.png" alt="Auralux Logo" />
-    <div>
+    <div class="text-stack">
       <h1>Auralux</h1>
       <p>Illuminate Your Inner Glow</p>
     </div>
   </div>
 </header>
+
 
   <section>
     <h2>Meet Auralux</h2>
