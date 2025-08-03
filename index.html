@@ -28,15 +28,15 @@
 
 .header {
   background-color: #d8c3c3;
-  padding: 1rem 0;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
 .header-inner {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
 }
 
 .logo {
@@ -52,10 +52,11 @@
 }
 
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: white;
   margin-top: 0.5rem;
 }
+
 
     section {
       padding: 3rem 2rem;
@@ -139,14 +140,13 @@
 <body>
 
   <header class="header">
-    <div class="header-inner">
-      <img src="auralux-logo.png" alt="Auralux logo" class="logo" />
-      <div class="brand-text">
-        <h1 class="brand-name">Auralux</h1>
-        <p class="tagline">Illuminate Your Inner Glow</p>
-      </div>
-    </div>
-  </header>
+  <div class="header-inner">
+    <img src="auralux-logo.png" alt="Auralux Logo" class="logo" />
+    <h1 class="business-name">Auralux</h1>
+  </div>
+  <p class="tagline">Illuminate Your Inner Glow</p>
+</header>
+
 
   <section>
     <h2>Meet Auralux</h2>
