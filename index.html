@@ -38,6 +38,12 @@
   gap: 1rem;
   justify-content: center;
 }
+    .brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 
 .logo {
   height: 170px;
@@ -139,13 +145,16 @@
 </head>
 <body>
 
-  <header class="header">
+ <header class="header">
   <div class="header-inner">
     <img src="auralux-logo.png" alt="Auralux Logo" class="logo" />
-    <h1 class="business-name">Auralux</h1>
+    <div class="brand-block">
+      <h1 class="business-name">Auralux</h1>
+      <p class="tagline">Illuminate Your Inner Glow</p>
+    </div>
   </div>
-  <p class="tagline">Illuminate Your Inner Glow</p>
 </header>
+
 
 
   <section>
