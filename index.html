@@ -26,52 +26,56 @@
       scroll-behavior: smooth;
     }
 
+    header {
+      background-color: var(--rose-gold);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
     .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  text-align: left;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
 
-header img {
-  height: 120px;
-  width: auto;
-  animation: fadeInLeft 1s ease-out;
-}
+    header img {
+      height: 120px;
+      width: auto;
+      animation: fadeInLeft 1s ease-out;
+    }
 
-.text-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.3rem;
-}
+    .text-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3rem;
+      animation: fadeInDown 1s ease-out;
+    }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin: 0;
-  animation: fadeInDown 1s ease-out;
-}
+    .text-stack h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin: 0;
+      color: white;
+    }
 
-header p {
-  font-size: 1.3rem;
-  margin: 0;
-  animation: fadeInUp 1s ease-out;
-}
+    .text-stack p {
+      font-size: 1.4rem;
+      margin: 0;
+      color: white;
+    }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
 
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
     section {
       padding: 3rem 2rem;
@@ -134,37 +138,41 @@ header p {
     }
 
     @media (max-width: 600px) {
-      header h1 {
+      .text-stack h1 {
         font-size: 2rem;
       }
+
+      .text-stack p {
+        font-size: 1.1rem;
+      }
+
       .grid-4 {
         grid-template-columns: 1fr;
       }
-    }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+      }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      .text-stack {
+        align-items: center;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
- <header>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-direction: row;">
-    <img src="auralux-logo.png" alt="Auralux Logo" style="height: 80px; width: auto;" />
-    <div style="text-align: left;">
-      <h1 style="margin: 0;">Auralux</h1>
-      <p style="margin: 0;">Illuminate Your Inner Glow</p>
+
+  <header>
+    <div class="header-content">
+      <img src="auralux-logo.png" alt="Auralux Logo" />
+      <div class="text-stack">
+        <h1>Auralux</h1>
+        <p>Illuminate Your Inner Glow</p>
+      </div>
     </div>
-  </div>
-</header>
-
-
+  </header>
 
   <section>
     <h2>Meet Auralux</h2>
@@ -199,7 +207,7 @@ header p {
     <p><strong>Can Auralux tell if a product is right for me?</strong><br>Yes. She analyzes your input (like skin type, climate, goals, and ingredient tolerances) to offer tailored, evidence based recommendations. You still get to make the final call, she jassists in helping make a smarter decision.</p>
     <p><strong>Will Auralux replace my dermatologist?</strong><br>No, girl. She’s a supplement, not a substitute. Auralux offers daily skincare support, but she’ll always recommend a visit to a licensed dermatologist for medical conditions or persistent concerns.</p>
     <p><strong>How does Auralux stay updated on skincare trends and science?</strong><br>Auralux is powered by AI models trained on extensive dermatological sources and continually updated with peer-reviewed research, formulation trends, and community feedback. Translation? She's always evolving to keep your glow on point.</p>
-    <p><strong>Can I use Auralux if I already have a routine?</strong><br>Totally. Auralux can enhance, refine, or troubleshoot your current regimen. She won’t throw shade—just helpful suggestions.</p>
+   . Auralux can enhance, refine, or troubleshoot your current regimen. She won’t throw shade—just helpful suggestions.</p>
     <p><strong>Can Auralux recommend items based on my skin type?</strong><br>Yes! Explain to her what the issue is or what you would like to achieve and she’ll tailor her answers.</p>
     <p><strong>How do I chat?</strong><br>Click the chat bubble at the bottom right of the screen.</p>
   </section>
@@ -222,5 +230,8 @@ header p {
       document.head.appendChild(t);
     });
   </script>
+
 </body>
 </html>
+
+
