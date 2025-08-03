@@ -147,12 +147,14 @@
       }
 
       .header-content {
-        flex-direction: column;
-        align-items: center;
-      }
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 👈 center the whole block */
+  gap: 2rem;
+  position: relative;
+}
 
       .text-stack {
-        align-items: center;
         text-align: center;
       }
     }
