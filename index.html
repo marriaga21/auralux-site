@@ -26,41 +26,42 @@
       scroll-behavior: smooth;
     }
 
-    .header {
-      background-color: var(--rose-gold);
-      padding: .5rem 1rem;
-      text-align: center;
-    }
+   .header {
+  background-color: var(--rose-gold);
+  padding: 2rem 1rem;
+  position: relative;
+  text-align: center;
+}
 
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
+.header-inner {
+  position: relative;
+}
 
-    .logo {
-      height: 240px;
-      width: auto;
-    }
+.logo {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+}
 
-    .brand-text {
-      text-align: center;
-    }
+.text-stack {
+  display: inline-block;
+}
 
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      color: white;
-      margin: 0;
-    }
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+}
 
-    .tagline {
-      font-size: .95rem;
-      color: white;
-      margin-top: 0.5rem;
-    }
+.tagline {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0.3rem;
+}
+
 
     section {
       padding: 3rem 2rem;
