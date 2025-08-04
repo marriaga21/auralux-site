@@ -142,19 +142,7 @@
       }
     }
   </style>
-   <script>
-  window.watsonAssistantChatOptions = {
-    integrationID: "5dd533b0-94c7-408f-af3c-0ca58f8b713a", // The ID of this integration.
-    region: "us-south", // The region your integration is hosted in.
-    serviceInstanceID: "264e6eed-7ea7-4eae-be9a-4c0c29eb0080", // The ID of your service instance.
-    onLoad: async (instance) => { await instance.render(); }
-  };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-    document.head.appendChild(t);
-  });
-</script>
+  
 </head>
 <body>
 
@@ -216,18 +204,18 @@
 
   <!-- IBM Watson Assistant Embed Script -->
   <script>
-    window.watsonAssistantChatOptions = {
-        integrationID: "YOUR-INTEGRATION-ID", // replace with actual ID
-        region: "us-south",
-        serviceInstanceID: "YOUR-SERVICE-ID", // replace with actual ID
-        onLoad: function(instance) { instance.render(); }
-    };
-    setTimeout(function(){
-      const t=document.createElement('script');
-      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
-      document.head.appendChild(t);
-    });
-  </script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "5dd533b0-94c7-408f-af3c-0ca58f8b713a", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "264e6eed-7ea7-4eae-be9a-4c0c29eb0080", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 
 </body>
 </html>
