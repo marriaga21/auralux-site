@@ -203,28 +203,26 @@
   </footer>
 
   <!-- IBM Watson Assistant Embed Script -->
- <!-- IBM Watson Assistant Embed Script with Size Control -->
-<style>
-  /* FORCE WATSON TO OBEY — targeted styling override */
-  iframe[title="Watson Assistant"] {
-    width: 320px !important;
-    height: 450px !important;
-    max-width: 90vw !important;
-    max-height: 80vh !important;
-    bottom: 16px !important;
-    right: 16px !important;
-    border-radius: 16px !important;
-    box-shadow: 0 0 16px rgba(0,0,0,0.15) !important;
-    z-index: 999999 !important;
-  }
-</style>
+ 
+<audio id="chatSound" src="chat-open.mp3" preload="auto"></audio>
+
 
 <script>
   window.watsonAssistantChatOptions = {
-    integrationID: "5dd533b0-94c7-408f-af3c-0ca58f8b713a", // Your actual ID
+    integrationID: "5dd533b0-94c7-408f-af3c-0ca58f8b713a", 
     region: "us-south",
     serviceInstanceID: "264e6eed-7ea7-4eae-be9a-4c0c29eb0080",
-    onLoad: async (instance) => { await instance.render(); }
+    onLoad: async (instance) => {
+      await instance.render();
+      const chatSound = document.getElementById("chatSound");
+
+      // Detect when chat is opened
+      instance.on({ type: "chat:open" }, () => {
+        chatSound.play().catch((err) => {
+          console.warn("Autoplay blocked or user interaction needed.");
+        });
+      });
+    }
   };
 
   setTimeout(function () {
@@ -233,6 +231,7 @@
     document.head.appendChild(t);
   });
 </script>
+
 
 </body>
 </html>
