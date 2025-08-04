@@ -206,7 +206,6 @@
  
 <audio id="chatSound" src="chat-open.mp3" preload="auto"></audio>
 
-
 <script>
   window.watsonAssistantChatOptions = {
     integrationID: "5dd533b0-94c7-408f-af3c-0ca58f8b713a", 
@@ -231,7 +230,16 @@
     document.head.appendChild(t);
   });
 </script>
-
+<script>
+  document.addEventListener("click", () => {
+    const chatSound = document.getElementById("chatSound");
+    if (chatSound) {
+      chatSound.play().catch(err => {
+        console.warn("Still blocked:", err);
+      });
+    }
+  }, { once: true });
+</script>
 
 </body>
 </html>
