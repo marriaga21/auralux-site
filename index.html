@@ -141,20 +141,6 @@
         height: 175px;
       }
     }
-    /* === WATSON CHAT RESIZER === */
-#watson-chat-root .WatsonAssistantChatPanel {
-  max-width: 360px !important;
-  max-height: 520px !important;
-  border-radius: 18px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-}
-
-#watson-chat-root .WatsonAssistantChatLauncher {
-  transform: scale(0.85) !important;
-  bottom: 20px !important;
-  right: 20px !important;
-}
-
   </style>
   
 </head>
@@ -217,16 +203,29 @@
   </footer>
 
   <!-- IBM Watson Assistant Embed Script -->
-  <script>
+ <!-- IBM Watson Assistant Embed Script with Size Control -->
+<style>
+  /* Inject Watson style override */
+  iframe[title="Watson Assistant"] {
+    width: 360px !important;
+    height: 520px !important;
+    border-radius: 18px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+</style>
+
+<script>
   window.watsonAssistantChatOptions = {
-    integrationID: "5dd533b0-94c7-408f-af3c-0ca58f8b713a", // The ID of this integration.
-    region: "us-south", // The region your integration is hosted in.
-    serviceInstanceID: "264e6eed-7ea7-4eae-be9a-4c0c29eb0080", // The ID of your service instance.
+    integrationID: "5dd533b0-94c7-408f-af3c-0ca58f8b713a", // Your actual ID
+    region: "us-south",
+    serviceInstanceID: "264e6eed-7ea7-4eae-be9a-4c0c29eb0080",
     onLoad: async (instance) => { await instance.render(); }
   };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+
+  setTimeout(function () {
+    const t = document.createElement('script');
+    t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
     document.head.appendChild(t);
   });
 </script>
